@@ -1,0 +1,32 @@
+.select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+
+  &__title {
+    min-width: 100px;
+
+    @include onTablet {
+      min-width: auto;
+    }
+  }
+
+  &__content {
+    min-width: 136px;
+    min-height: 40px;
+    width: 100%;
+    border: 1px solid $general-color;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+    color: inherit;
+  }
+
+
+  transition: box-shadow 0.3s;
+}
+
+.select:focus {
+  box-shadow: 2px 2px 5px rgba(0, 128, 128, 0.40);
+}

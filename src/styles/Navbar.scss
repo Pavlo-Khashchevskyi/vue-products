@@ -1,0 +1,33 @@
+.navbar {
+  background-color: $general-color;
+  box-shadow: 2px 2px 4px gray;
+  position: relative;
+
+  &__content {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  &__logo {
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__btns {
+    color: white;
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__btn {
+    color: white;
+    border-color: white;
+  }
+}

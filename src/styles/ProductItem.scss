@@ -1,0 +1,72 @@
+.card {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border: 1px solid $general-color;
+  color: $general-color;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80%;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 128, 128, 0.5);
+    transform: translateX(-100%);
+    overflow-y: auto;
+    opacity: 0.2;
+
+    transition: all 0.3s;
+
+    &--act {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+  }
+  
+  &__title {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__btn-active {
+    background-color: $general-color;
+    color: white;
+  }
+
+  &__hr {
+    margin: 10px 0;
+  }
+}

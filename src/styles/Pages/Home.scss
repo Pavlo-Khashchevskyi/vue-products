@@ -1,0 +1,37 @@
+.home {
+  background-image: url('@/assets/background.jpg');
+  background-size: cover;
+  height: 100%;
+  
+  @include flex-center;
+
+  &__title {
+    padding: 30px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    user-select: none;
+
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.7);
+      color: white;
+    }
+
+    animation: moveTitle 1.5s linear infinite alternate;
+  }
+
+  @keyframes moveTitle {
+    from {
+      top: -20px;
+      font-size: 38px;
+    }
+    to {
+      top: 20px;
+      font-size: 44px;
+    }
+  }
+}

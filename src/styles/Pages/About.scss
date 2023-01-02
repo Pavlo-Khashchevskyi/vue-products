@@ -1,0 +1,17 @@
+.about {
+  background-image: url('@/assets/background.jpg');
+  background-size: cover;
+  height: 100%;
+  @include flex-center;
+
+  &__content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__link {
+    font-size: 32px;
+  }
+}

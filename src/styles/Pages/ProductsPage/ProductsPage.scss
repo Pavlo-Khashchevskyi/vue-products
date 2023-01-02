@@ -1,0 +1,27 @@
+.productsPage {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+
+    @include on900 {
+      flex-direction: row;
+    }
+  }
+
+  &__selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include onTablet {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}

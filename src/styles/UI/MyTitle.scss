@@ -1,0 +1,11 @@
+.title {
+  font-size: 20px;
+
+  @include onTablet {
+    font-size: 26px;
+  }
+
+  @include onLaptop {
+    font-size: 34px;
+  }
+}

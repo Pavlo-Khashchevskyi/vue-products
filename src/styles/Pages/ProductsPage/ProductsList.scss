@@ -1,0 +1,38 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include on900 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.productsList-enter-active {
+  animation: bounce-in .5s;
+}
+.productsList-leave-active {
+  animation: bounce-in .5s reverse;
+}
+.productsList-move {
+  transition: transform 0.8s ease;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
