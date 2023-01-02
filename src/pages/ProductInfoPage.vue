@@ -21,7 +21,7 @@
             <span class="productPage__price">{{ `${currentProduct.price} $` }}</span>
           </div>
 
-          <my-button @click="handleButton">Bue</my-button>
+          <my-button @click="handleButton">Buy</my-button>
         </div>
 
 
