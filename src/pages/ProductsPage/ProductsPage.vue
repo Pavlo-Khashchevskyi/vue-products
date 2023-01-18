@@ -26,7 +26,7 @@
       v-if="!isLoading && products.length > 0"
       :products="sortedByPrice"
     />
-    <div v-else>Loading...</div>
+    <MyLoader v-else></MyLoader>
   </div>
 </template>
 

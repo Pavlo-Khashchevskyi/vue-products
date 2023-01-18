@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div style="padding-top: 20px" class="container" v-else>Loading...</div>
+  <MyLoader v-else></MyLoader>
 </template>
 
 <script>
@@ -70,7 +70,12 @@ export default {
     })
   },
   mounted() {
-    this.fetchCurrentProduct(this.$route.params.id);
+    this.fetchCurrentProduct(this.$route.params.id)
+      .then(data => {
+        if (!data) {
+          this.$router.push('/products');
+        }
+      })
   },
   unmounted() {
     this.setInitialValue('currentProduct');

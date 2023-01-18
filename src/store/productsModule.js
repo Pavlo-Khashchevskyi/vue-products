@@ -74,7 +74,10 @@ export const productsModule = {
         commit('setIsLoading', true);
 
         const response = await axios.get(Base_URL + `/${id}`);
-        commit('setCurrentProduct', response.data);
+        const currentProduct = response.data ? response.data : null;
+        commit('setCurrentProduct', currentProduct);
+
+        return currentProduct;
       } catch (e) {
         console.log(e)
       } finally {
